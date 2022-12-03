@@ -67,6 +67,8 @@ export const Container = styled.div`
   display: flex;
   margin: 0 auto;
   bottom: 150px;
+  transform: scale(0.75);
+  transform-origin: 58% 0%;
   > div {
     width: fit-content;
     position: relative;
@@ -78,7 +80,6 @@ export const Container = styled.div`
     bottom: -50px;
   }
   @media (max-width: 717px) {
-    transform: scale(0.94);
     transform-origin: 50% 0%;
     justify-content: center;
     bottom: -80px;
@@ -187,7 +188,7 @@ export const CloudLight = styled.div`
   width: calc(184.48611px + 185.51389 * (100vw - 718px) / 722);
   height: calc(62.825px + 63.175 * (100vw - 718px) / 722);
   bottom: 4%;
-  right: 160%;
+  right: 60%;
   @media (max-width: 717px) {
     transform: scale(2);
   }
@@ -203,7 +204,7 @@ export const CloudDark = styled.div`
   width: calc(135.12361px + 135.87639 * (100vw - 718px) / 722);
   height: calc(45.37361px + 45.62639 * (100vw - 718px) / 722);
   bottom: -1%;
-  left: 160%;
+  right: 60%;
   @media (max-width: 717px) {
     transform: scale(2);
   }

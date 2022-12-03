@@ -42,7 +42,9 @@ body {
   padding: 0;
   min-width: 320px;
 }
-
+body::-webkit-scrollbar {
+  display: none;
+}
 /************************ HEADINGS AND LINKS *************************/
 a {
   text-decoration: none;
