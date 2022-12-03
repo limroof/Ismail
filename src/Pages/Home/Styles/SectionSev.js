@@ -7,6 +7,7 @@ export const Section = styled.section`
   width: 100%;
   background-color: #4ce8e3;
   position: relative;
+  overflow: hidden;
 `;
 export const Container = styled.div`
   width: 100%;
