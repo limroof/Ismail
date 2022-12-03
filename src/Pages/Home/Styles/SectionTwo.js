@@ -10,12 +10,19 @@ export const Section = styled.section`
 
 export const H2 = styled.h2`
   margin-top: 0;
+  font-weight: 500;
 `;
 
 export const Columns = styled.div`
   max-width: 1100px;
   display: flex;
   margin: 0 auto;
+  row-gap: 60px;
+
+  @media (max-width: 1021px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const Item = styled.div`

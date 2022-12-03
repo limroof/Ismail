@@ -20,37 +20,34 @@ export default function SectionFive() {
   return (
     <Section>
       <Container>
-        {CurrSlide !== undefined && (
-          <React.Fragment>
-            {/* <Slide item={SliderList[CurrSlide]} /> */}
+        <React.Fragment>
+          {SliderList.map((elem, index) => {
+            return (
+              index === CurrSlide && (
+                <Item>
+                  <Description>
+                    <Icon src={elem.icon} alt=""></Icon>
+                    <H2>{elem.paragraph}</H2>
+                  </Description>
+                  <Image>
+                    <img src={elem.picture}></img>
+                  </Image>
+                </Item>
+              )
+            );
+          })}
+          <ButtonsContainer>
             {SliderList.map((elem, index) => {
               return (
-                index === CurrSlide && (
-                  <Item>
-                    <Description>
-                      <Icon src={elem.icon} alt=""></Icon>
-                      <H2>{elem.paragraph}</H2>
-                    </Description>
-                    <Image>
-                      <img src={elem.picture}></img>
-                    </Image>
-                  </Item>
-                )
+                <Dot
+                  className={index === CurrSlide && "active"}
+                  key={`Dot${index}`}
+                  onClick={() => setCurrSlide(index)}
+                ></Dot>
               );
             })}
-            <ButtonsContainer>
-              {SliderList.map((elem, index) => {
-                return (
-                  <Dot
-                    className={index === CurrSlide && "active"}
-                    key={`Dot${index}`}
-                    onClick={() => setCurrSlide(index)}
-                  ></Dot>
-                );
-              })}
-            </ButtonsContainer>
-          </React.Fragment>
-        )}
+          </ButtonsContainer>
+        </React.Fragment>
       </Container>
     </Section>
   );

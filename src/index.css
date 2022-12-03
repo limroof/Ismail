@@ -79,7 +79,6 @@ button.cta-button.get-the-app {
   font-size: 36px;
   line-height: 46px;
   font-weight: 500;
-  max-width: 480px;
 }
 .hero__subtitle {
   font-size: 24px;
@@ -108,6 +107,7 @@ h2 {
   margin: 0 auto 20px;
   font-weight: 500;
 }
+
 /************************ END: HEADINGS /*************************/
 
 p {
@@ -116,3 +116,11 @@ p {
   line-height: 32px;
   margin-top: 0;
 }
+/************************ END: Responsive /*************************/
+@media screen and (max-width: 1021px) {
+  .hero__subtitle,
+  p {
+    font-size: 18px;
+  }
+}
+/************************ END: Responsive /*************************/

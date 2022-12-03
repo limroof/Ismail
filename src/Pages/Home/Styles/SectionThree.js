@@ -10,13 +10,12 @@ export const Columns = styled.div`
   justify-content: center;
   margin-bottom: 40px;
   overflow: hidden;
+  column-gap: 5px;
 `;
 export const Profile = styled.div`
   display: flex;
   min-width: 720px;
-  height: 350px;
-  max-width: none;
-  margin-right: 20px;
+  height: auto;
   padding: 50px;
   border: 1px solid #e0e0e0;
   border-radius: 5px;
@@ -31,8 +30,18 @@ export const Profile = styled.div`
     scale: 1;
     opacity: 1;
   }
+  @media (max-width: 1120px) {
+    min-width: 50%;
+    flex-direction: column;
+  }
 `;
 
+export const ProfilePicture = styled.div`
+  img {
+    margin-left: auto;
+    display: block;
+  }
+`;
 export const Strong = styled.strong`
   font-size: 24px;
   line-height: 32px;

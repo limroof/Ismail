@@ -22,6 +22,9 @@ export const Paragraph = styled.p`
   text-align: center;
   font-size: 22px;
   margin-bottom: 20px;
+  @media (max-width: 758px) {
+    max-width: 500px;
+  }
 `;
 export const H2 = styled.h2``;
 
@@ -33,7 +36,7 @@ export const FloatingHopper = styled.div`
   width: 160px;
   height: 252px;
   position: absolute;
-  left: 20px;
+  left: 130px;
 `;
 
 export const Devices = styled.div`
@@ -44,5 +47,5 @@ export const Devices = styled.div`
   width: 192px;
   height: 137px;
   position: absolute;
-  right: 20px;
+  right: 60px;
 `;

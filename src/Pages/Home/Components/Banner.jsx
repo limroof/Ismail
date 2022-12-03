@@ -1,6 +1,7 @@
 import {
   Section,
   BannerContainer,
+  H1,
   Button,
   BackgroundImage,
   Container,
@@ -18,11 +19,11 @@ export default function Banner() {
   return (
     <Section>
       <BannerContainer>
-        <h1 className="hero__title">
+        <H1 className="hero__title">
           Welcome to Grasshopper,
           <br />
           the coding app for beginners
-        </h1>
+        </H1>
         <p className="hero__subtitle">Learning to code</p>
         <Button className="cta-button start-coding">Start coding today</Button>
       </BannerContainer>

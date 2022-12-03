@@ -18,8 +18,17 @@ export const Section = styled.section`
   overflow: hidden;
   h1,
   p {
+    max-width: 480px;
+    width: 100%;
     margin: 0;
   }
+
+  @media (max-width: 717px) {
+    height: 873px;
+  }
+`;
+export const H1 = styled.h1`
+  font-weight: 400;
 `;
 
 export const BannerContainer = styled.div`
@@ -31,17 +40,21 @@ export const BannerContainer = styled.div`
   row-gap: 22px;
   position: relative;
   z-index: 10;
+  @media (max-width: 1021px) {
+    align-items: center;
+    text-align: center;
+    padding-top: 30px;
+  }
 `;
 export const BackgroundImage = styled.div`
   background-image: url(${`${bgImage}`});
-  background-position: 100% 28%;
-  background-size: 110%;
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
-  z-index: 1;
-  top: 23.5%;
+  position: absolute;
+  bottom: -20%;
+  width: 2000px;
+  height: 100%;
+}
 `;
 
 export const Container = styled.div`
@@ -49,7 +62,6 @@ export const Container = styled.div`
   z-index: 2;
   width: 43.9%;
   width: 100%;
-  max-width: 1200px;
   min-height: 100px;
   min-width: 600px;
   display: flex;
@@ -62,59 +74,93 @@ export const Container = styled.div`
     position: relative;
     align-items: flex-end;
   }
+  @media (max-width: 1021px) {
+    bottom: -50px;
+  }
+  @media (max-width: 717px) {
+    transform: scale(0.94);
+    transform-origin: 50% 0%;
+    justify-content: center;
+    bottom: -80px;
+    min-width: 100%;
+  }
+  @media (max-width: 580px) {
+    bottom: -60px;
+  }
 `;
 export const PartOne = styled.div`
   left: -330px;
   left: -34px;
   bottom: -65px;
+  > div {
+    @media (max-width: 717px) {
+      display: none;
+    }
+  }
 `;
 export const PartTwo = styled.div`
-  left: 37.5%;
+    left: 37.5%;
+    @media (max-width: 717px){
+      left:0;
+    }
+  }
 `;
 export const DarkLeaf = styled.div`
   background-image: url(${`${darkLeaf}`});
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  width: 272px;
-  height: 366px;
+  width: calc(135.62222px + 136.37778 * (100vw - 718px) / 722);
+  height: calc(182.49167px + 183.50833 * (100vw - 718px) / 722);
+  @media (max-width: 717px) {
+    display: none;
+  }
 `;
 export const LightLeaf = styled.div`
   background-image: url(${`${lightLeaf}`});
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  width: 166px;
-  height: 366px;
+  width: calc(82.76944px + 83.23056 * (100vw - 718px) / 722);
+  height: calc(182.49167px + 183.50833 * (100vw - 718px) / 722);
   position: absolute;
   left: 80%;
+  @media (max-width: 717px) {
+    display: none;
+  }
 `;
 
 export const Laptop = styled.div`
-  height: 266px;
-  width: 456px;
-  position: relative;
-  z-index: 1;
   background-image: url(${`${laptop}`});
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  width: calc(227.36667px + 228.63333 * (100vw - 718px) / 722);
+  height: calc(227.36667px + 228.63333 * (100vw - 718px) / 722);
+  z-index: 1;
   position: absolute;
-  left: -345px;
-  bottom: 124px;
+  left: -115.8%;
+  bottom: 5%;
+  @media (max-width: 717px) {
+    display: none;
+  }
 `;
 
 export const Phone = styled.div`
-  height: 579px;
-  width: 298px;
   position: relative;
   z-index: 2;
   background-image: url(${`${phone}`});
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  height: calc(288.69583px + 290.30417 * (100vw - 718px) / 722);
+  width: calc(148.58611px + 149.41389 * (100vw - 718px) / 722);
   position: relative;
   bottom: 8px;
+  @media (max-width: 717px) {
+    height: calc(424.36px + 103.64 * (100vw - 375px) / 342);
+    transform: scale(2);
+  }
 `;
 
 export const GrassHopper = styled.div`
@@ -122,11 +168,14 @@ export const GrassHopper = styled.div`
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  width: 569px;
-  height: 588px;
+  width: calc(283.70972px + 285.29028 * (100vw - 718px) / 722);
+  height: calc(293.18333px + 294.81667 * (100vw - 718px) / 722);
   position: absolute;
-  bottom: -182px;
-  left: -45px;
+  bottom: -30.5%;
+  left: -14.8%;
+  @media (max-width: 717px) {
+    display: none;
+  }
 `;
 export const CloudLight = styled.div`
   background-image: url(${`${cloudLight}`});
@@ -135,10 +184,13 @@ export const CloudLight = styled.div`
   background-position: center;
   position: absolute;
   z-index: 1;
-  width: 376px;
-  height: 126px;
+  width: calc(184.48611px + 185.51389 * (100vw - 718px) / 722);
+  height: calc(62.825px + 63.175 * (100vw - 718px) / 722);
   bottom: 4%;
-  right: 70%;
+  right: 160%;
+  @media (max-width: 717px) {
+    transform: scale(2);
+  }
 `;
 
 export const CloudDark = styled.div`
@@ -148,8 +200,11 @@ export const CloudDark = styled.div`
   background-position: center;
   position: absolute;
   z-index: 2;
-  width: 271px;
-  height: 91px;
+  width: calc(135.12361px + 135.87639 * (100vw - 718px) / 722);
+  height: calc(45.37361px + 45.62639 * (100vw - 718px) / 722);
   bottom: -1%;
-  right: 70%;
+  left: 160%;
+  @media (max-width: 717px) {
+    transform: scale(2);
+  }
 `;

@@ -3,6 +3,7 @@ import {
   H2,
   Columns,
   Profile,
+  ProfilePicture,
   ProfileDescription,
   Strong,
   ButtonsContainer,
@@ -21,12 +22,12 @@ export default function SectionThree() {
               className={index === 1 && "active"}
               key={`Profile${index}`}
             >
-              <div>
+              <ProfilePicture>
                 <img src={elem.picture} alt=""></img>
-              </div>
+              </ProfilePicture>
               <ProfileDescription key={`Description${index}`}>
                 <img src={quotes} alt=""></img>
-                <p>{elem.paragraph}</p>
+                <p className="">{elem.paragraph}</p>
                 <Strong>{elem.name}</Strong>
               </ProfileDescription>
             </Profile>
