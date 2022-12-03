@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/Ismail/static/css/main.5960456f.css",
+    "main.js": "/Ismail/static/js/main.3e90dc45.js",
+    "static/media/GT-America-Standard-Medium.ttf": "/Ismail/static/media/GT-America-Standard-Medium.af6b09ec0847c953616c.ttf",
+    "static/media/GT-America-Standard-Bold.ttf": "/Ismail/static/media/GT-America-Standard-Bold.f1d6323d373a9addc711.ttf",
+    "static/media/GT-America-Standard-Regular.ttf": "/Ismail/static/media/GT-America-Standard-Regular.86166284fd344abbc497.ttf",
+    "static/media/hero__pixel.png": "/Ismail/static/media/hero__pixel.bbcc1a40f9c878a8c6ad.png",
+    "static/media/GT-America-Standard-Bold.eot": "/Ismail/static/media/GT-America-Standard-Bold.8bbf88bd3b96b721896f.eot",
+    "static/media/GT-America-Standard-Medium.eot": "/Ismail/static/media/GT-America-Standard-Medium.a0d72a13844460b31d1f.eot",
+    "static/media/hero__macbook.png": "/Ismail/static/media/hero__macbook.e6c8e213dd19e8ecc491.png",
+    "static/media/GT-America-Standard-Bold.woff": "/Ismail/static/media/GT-America-Standard-Bold.da152dfc3bc478f35d3d.woff",
+    "static/media/GT-America-Standard-Medium.woff": "/Ismail/static/media/GT-America-Standard-Medium.6ec8b125347e15463083.woff",
+    "static/media/GT-America-Standard-Regular.eot": "/Ismail/static/media/GT-America-Standard-Regular.f5d5aa1849dc6027e6e8.eot",
+    "static/media/GT-America-Standard-Regular.woff": "/Ismail/static/media/GT-America-Standard-Regular.1ed6918bc18d7847f38e.woff",
+    "static/media/GT-America-Standard-Bold.woff2": "/Ismail/static/media/GT-America-Standard-Bold.5d4eb2d2da5faff267fb.woff2",
+    "static/media/GT-America-Standard-Medium.woff2": "/Ismail/static/media/GT-America-Standard-Medium.6e198cece139f67b6250.woff2",
+    "static/media/GT-America-Standard-Regular.woff2": "/Ismail/static/media/GT-America-Standard-Regular.14be9521dc3c0f2131bf.woff2",
+    "static/media/section--get-started__grasshopper-mama.svg": "/Ismail/static/media/section--get-started__grasshopper-mama.7afe94df50c218e2ccd7bd78dbb233c9.svg",
+    "static/media/logo.blue.svg": "/Ismail/static/media/logo.blue.91c0e9db22ca881b2649ebfb70bd6cde.svg",
+    "static/media/grasshopper__practice__meditate.svg": "/Ismail/static/media/grasshopper__practice__meditate.4cfd6fbcd9f50b0659316d99a912d356.svg",
+    "static/media/adventure__journey.svg": "/Ismail/static/media/adventure__journey.1726e6267e3833b638b80bea65f12f65.svg",
+    "static/media/adventure__coding.svg": "/Ismail/static/media/adventure__coding.621698a02400207988c0ea3a4990a615.svg",
+    "static/media/adventure__waving.svg": "/Ismail/static/media/adventure__waving.ee503e4dddcee226e2739f17ea4e6d3c.svg",
+    "static/media/hero__grasshopper.svg": "/Ismail/static/media/hero__grasshopper.d3fceba2dd71d982796710d0a9669e28.svg",
+    "static/media/devices.svg": "/Ismail/static/media/devices.0e863a6546abcb8698eefca67032ca66.svg",
+    "static/media/hero__tree-skinny.svg": "/Ismail/static/media/hero__tree-skinny.68620eff1708f9a2454bbf7af4a1c3e5.svg",
+    "static/media/section--get-started__cloud.svg": "/Ismail/static/media/section--get-started__cloud.b887f874ac7a4278dcce55c4ea092ba7.svg",
+    "static/media/quotes.svg": "/Ismail/static/media/quotes.285741c6584d7a4105020178b44c036f.svg",
+    "static/media/hero__tree-dark.svg": "/Ismail/static/media/hero__tree-dark.ddd9de4901c823e9899fdf834586790f.svg",
+    "static/media/hero__bush-light.svg": "/Ismail/static/media/hero__bush-light.e239f516b2c82f6d169de9001fb260bf.svg",
+    "static/media/hero__background-hills.svg": "/Ismail/static/media/hero__background-hills.ec4d5313fd0c3c3cfbf33282f38b0b9e.svg",
+    "static/media/hero__bush-dark.svg": "/Ismail/static/media/hero__bush-dark.54bc4f3aea39de10e106396eb4f3168d.svg",
+    "index.html": "/Ismail/index.html",
+    "main.5960456f.css.map": "/Ismail/static/css/main.5960456f.css.map",
+    "main.3e90dc45.js.map": "/Ismail/static/js/main.3e90dc45.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5960456f.css",
+    "static/js/main.3e90dc45.js"
+  ]
+}
