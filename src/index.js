@@ -7,7 +7,7 @@ import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter basename="https://limroof.github.io/Ismail">
+  <BrowserRouter>
     <Header />
     <Routes>
       <Route path="/" element={<Home />} />
