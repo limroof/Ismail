@@ -20,7 +20,6 @@ export default function Home() {
         <SectionFive></SectionFive>
         <SectionSix></SectionSix>
         <SectionSev></SectionSev>
-        <Footer></Footer>
       </Main>
     </React.Fragment>
   );
