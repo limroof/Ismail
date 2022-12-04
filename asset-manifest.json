@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Ismail/static/css/main.fa429d1b.css",
-    "main.js": "/Ismail/static/js/main.69871025.js",
+    "main.js": "/Ismail/static/js/main.0195b8e6.js",
     "static/media/GT-America-Standard-Medium.ttf": "/Ismail/static/media/GT-America-Standard-Medium.af6b09ec0847c953616c.ttf",
     "static/media/GT-America-Standard-Bold.ttf": "/Ismail/static/media/GT-America-Standard-Bold.f1d6323d373a9addc711.ttf",
     "static/media/GT-America-Standard-Regular.ttf": "/Ismail/static/media/GT-America-Standard-Regular.86166284fd344abbc497.ttf",
@@ -37,10 +37,10 @@
     "index.html": "/Ismail/index.html",
     "static/media/close-icon.svg": "/Ismail/static/media/close-icon.7816ca68b96d05f03b6d41d6d8144dfc.svg",
     "main.fa429d1b.css.map": "/Ismail/static/css/main.fa429d1b.css.map",
-    "main.69871025.js.map": "/Ismail/static/js/main.69871025.js.map"
+    "main.0195b8e6.js.map": "/Ismail/static/js/main.0195b8e6.js.map"
   },
   "entrypoints": [
     "static/css/main.fa429d1b.css",
-    "static/js/main.69871025.js"
+    "static/js/main.0195b8e6.js"
   ]
 }
