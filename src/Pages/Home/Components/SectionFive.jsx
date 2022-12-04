@@ -2,7 +2,7 @@ import React from "react";
 import {
   Section,
   Container,
-  ButtonsContainer,
+  DotContainer,
   Dot,
   Item,
   Description,
@@ -16,7 +16,19 @@ import { useState } from "react";
 
 export default function SectionFive() {
   const [CurrSlide, setCurrSlide] = useState(0);
-
+  const Buttons = (
+    <DotContainer>
+      {SliderList.map((elem, index) => {
+        return (
+          <Dot
+            className={index === CurrSlide && "active"}
+            key={`Dot${index}`}
+            onClick={() => setCurrSlide(index)}
+          ></Dot>
+        );
+      })}
+    </DotContainer>
+  );
   return (
     <Section>
       <Container>
@@ -28,6 +40,7 @@ export default function SectionFive() {
                   <Description>
                     <Icon src={elem.icon} alt=""></Icon>
                     <H2>{elem.paragraph}</H2>
+                    {Buttons}
                   </Description>
                   <Image>
                     <img src={elem.picture}></img>
@@ -36,17 +49,6 @@ export default function SectionFive() {
               )
             );
           })}
-          <ButtonsContainer>
-            {SliderList.map((elem, index) => {
-              return (
-                <Dot
-                  className={index === CurrSlide && "active"}
-                  key={`Dot${index}`}
-                  onClick={() => setCurrSlide(index)}
-                ></Dot>
-              );
-            })}
-          </ButtonsContainer>
         </React.Fragment>
       </Container>
     </Section>

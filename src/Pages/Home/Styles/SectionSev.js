@@ -15,17 +15,28 @@ export const Container = styled.div`
   flex-direction: column;
   max-width: 1200px;
   margin: 0 auto;
-  padding-left: 140px;
-  padding-right: 40px;
   padding-top: 124px;
   padding-bottom: 94px;
+  padding-left: 140px;
+  padding-right: 40px;
   position: relative;
   z-index: 1;
+  @media (max-width: 1022px) {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 94px;
+    padding-bottom: 60px;
+    text-align: center;
+    align-items: center;
+  }
 `;
 
 export const H2 = styled.h2`
   font-weight: 500;
   max-width: 560px;
+  @media (max-width: 700px) {
+    font-size: 32px;
+  }
 `;
 
 export const Button = styled.button`
@@ -44,6 +55,9 @@ export const GrassHopperMama = styled.div`
   height: 729px;
   top: 20%;
   right: 15%;
+  @media (max-width: 1022px) {
+    display: none;
+  }
 `;
 
 const moveRight = keyframes`

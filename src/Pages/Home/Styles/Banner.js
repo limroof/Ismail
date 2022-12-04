@@ -28,7 +28,9 @@ export const Section = styled.section`
   }
 `;
 export const H1 = styled.h1`
-  font-weight: 400;
+  @media (max-width: 717px) {
+    font-weight: 400;
+  }
 `;
 
 export const BannerContainer = styled.div`

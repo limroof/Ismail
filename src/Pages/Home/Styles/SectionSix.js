@@ -5,6 +5,10 @@ export const Section = styled.section`
   overflow: hidden;
   padding-top: 124px;
   padding-bottom: 94px;
+  @media (max-width: 728px) {
+    padding-top: 90px;
+    padding-bottom: 60px;
+  }
 `;
 export const H2 = styled.h2`
   font-weight: 500;

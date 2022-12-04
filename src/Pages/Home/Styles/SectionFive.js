@@ -33,35 +33,61 @@ export const Item = styled.div`
   display: flex;
   align-items: center;
   min-width: 100%;
+  position: relative;
   > div {
     width: 50%;
+    @media (max-width: 720px) {
+      width: 100%;
+    }
   }
 `;
 export const Description = styled.div`
   padding-left: 130px;
-  animation: ${fadeIn} 0.75s forwards;
+  position: relative;
+  h2,
+  img {
+    animation: ${fadeIn} 0.75s forwards;
+  }
+  @media (max-width: 800px) {
+    padding-left: 60px;
+  }
+  @media (max-width: 580px) {
+    padding-left: 30px;
+  }
 `;
 export const H2 = styled.h2`
   font-weight: 500;
   max-width: 460px;
   min-height: 140px;
+  margin: 0;
+  @media (max-width: 720px) {
+    font-size: 28px;
+  }
 `;
 export const Icon = styled.img`
   width: 50px;
   height: 50px;
+  margin-bottom: 20px;
 `;
 export const Image = styled.div`
   animation: ${fadeInTwo} 0.75s forwards;
-  height: 850px;
-  padding-left: 50px;
+  height: 712px;
+  position: relative;
+  display: flex;
+  right: -15%;
+  > img {
+    position: absolute;
+  }
+  @media (max-width: 720px) {
+    display: none;
+  }
 `;
 
-export const ButtonsContainer = styled.div`
+export const DotContainer = styled.div`
   display: flex;
   column-gap: 14px;
   position: absolute;
-  padding-left: 130px;
-  bottom: 36%;
+  bottom: -45px;
 `;
 export const Dot = styled.button`
   display: block;

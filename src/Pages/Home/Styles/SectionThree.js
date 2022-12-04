@@ -22,7 +22,7 @@ export const Profile = styled.div`
   background-color: #f8f8f8;
   box-shadow: 0 4px 6px 0 rgb(0 0 0 / 10%);
   column-gap: 48px;
-  translate: 200%;
+  translate: calc(200% + 10px);
   scale: 0.98;
   transition: transform 0.5s;
   opacity: 0.4;
@@ -33,6 +33,9 @@ export const Profile = styled.div`
   @media (max-width: 1120px) {
     min-width: 50%;
     flex-direction: column;
+  }
+  @media (max-width: 720px) {
+    min-width: 100%;
   }
 `;
 

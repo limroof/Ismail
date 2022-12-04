@@ -33,6 +33,10 @@ export const Top = styled.div`
     display: flex;
     flex-direction: column;
   }
+  @media (max-width: 530px) {
+    flex-direction: column;
+    row-gap: 30px;
+  }
 `;
 export const Bottom = styled.div`
   display: flex;
