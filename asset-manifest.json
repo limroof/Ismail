@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Ismail/static/css/main.c987d091.css",
-    "main.js": "/Ismail/static/js/main.29e00180.js",
+    "main.js": "/Ismail/static/js/main.a40c48ed.js",
     "static/media/GT-America-Standard-Medium.ttf": "/Ismail/static/media/GT-America-Standard-Medium.af6b09ec0847c953616c.ttf",
     "static/media/GT-America-Standard-Bold.ttf": "/Ismail/static/media/GT-America-Standard-Bold.f1d6323d373a9addc711.ttf",
     "static/media/GT-America-Standard-Regular.ttf": "/Ismail/static/media/GT-America-Standard-Regular.86166284fd344abbc497.ttf",
@@ -25,6 +25,7 @@
     "static/media/adventure__waving.svg": "/Ismail/static/media/adventure__waving.ee503e4dddcee226e2739f17ea4e6d3c.svg",
     "static/media/hero__grasshopper.svg": "/Ismail/static/media/hero__grasshopper.d3fceba2dd71d982796710d0a9669e28.svg",
     "static/media/devices.svg": "/Ismail/static/media/devices.0e863a6546abcb8698eefca67032ca66.svg",
+    "static/media/gh_icon.svg": "/Ismail/static/media/gh_icon.e0d176e97f4598ea746085bf333cddd7.svg",
     "static/media/hero__tree-skinny.svg": "/Ismail/static/media/hero__tree-skinny.68620eff1708f9a2454bbf7af4a1c3e5.svg",
     "static/media/section--get-started__cloud.svg": "/Ismail/static/media/section--get-started__cloud.b887f874ac7a4278dcce55c4ea092ba7.svg",
     "static/media/quotes.svg": "/Ismail/static/media/quotes.285741c6584d7a4105020178b44c036f.svg",
@@ -36,10 +37,10 @@
     "index.html": "/Ismail/index.html",
     "static/media/close-icon.svg": "/Ismail/static/media/close-icon.7816ca68b96d05f03b6d41d6d8144dfc.svg",
     "main.c987d091.css.map": "/Ismail/static/css/main.c987d091.css.map",
-    "main.29e00180.js.map": "/Ismail/static/js/main.29e00180.js.map"
+    "main.a40c48ed.js.map": "/Ismail/static/js/main.a40c48ed.js.map"
   },
   "entrypoints": [
     "static/css/main.c987d091.css",
-    "static/js/main.29e00180.js"
+    "static/js/main.a40c48ed.js"
   ]
 }
