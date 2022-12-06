@@ -24,6 +24,10 @@ router.post("/", (req, res, next) => {
 // ******************** GET ROUTE ********************************
 
 router.get("/", (req, res, next) => {
+  res.send("bonjour");
+});
+
+router.get("/", (req, res, next) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Content-Type", "application/json");
   next();
