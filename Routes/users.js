@@ -12,7 +12,7 @@ userRouter.use(bodyParser.json());
 userRouter.use(cookieParser());
 userRouter.setHeader(
   "Access-Control-Allow-Origin",
-  "https://limroof.github.io"
+  "https://limroof.github.io/"
 );
 
 // ******************** USER ROUTE ******************************
