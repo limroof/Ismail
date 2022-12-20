@@ -1,5 +1,5 @@
 const UserModel = require("../models/users");
-const Todo = require("../models/todos");
+const TodoModel = require("../models/todos");
 const JWT = require("jsonwebtoken");
 const signtoken = (userId) => {
   return JWT.sign(
@@ -62,6 +62,7 @@ exports.logout = (req, res) => {
 
 exports.addTodo = (req, res) => {
   const todo = new Todo(req.body);
+  console.log(req.body);
   todo.save((err) => {
     if (err)
       res.status(500).json({ message: { msgBody: err, msgError: true } });
@@ -85,7 +86,31 @@ exports.addTodo = (req, res) => {
     }
   });
 };
-
+exports.deleteTodo = (req, res) => {
+  const _id = req.body._id;
+  TodoModel.findByIdAndDelete(_id, (err) => {
+    if (err)
+      res.status(500).json({ message: { msgBody: err, msgError: true } });
+    else {
+      req.user.todos.splice(req.user.todos.indexOf(), 1);
+      req.user.save((err) => {
+        if (err)
+          res.status(500).json({
+            message: { msgBody: err, msgError: true },
+          });
+        else {
+          console.log("SUCCESS LOGIN");
+          res.status(200).json({
+            message: {
+              msgBody: "Todo successfully created",
+              msgError: false,
+            },
+          });
+        }
+      });
+    }
+  });
+};
 exports.getTodo = (req, res) => {
   UserModel.findById({ _id: req.user._id })
     .populate("todos")
@@ -96,26 +121,25 @@ exports.getTodo = (req, res) => {
         });
       else {
         console.log("SUCCESS: GET_TODO");
-        console.log(document.todos);
         res.status(200).send({ todos: document.todos, authenticated: true });
       }
     });
 };
 
 exports.updateTodo = (req, res) => {
-  const { _id, name } = req.body;
-
+  const { _id, name, newName } = req.body.current;
   Todo.findByIdAndUpdate(
-    _id,
-    { name: name },
+    { _id },
+    { name: newName },
     { new: true },
     (err, document) => {
       if (err)
         res.status(500).json({
           message: { msgBody: "error has occured", msgError: true },
         });
-      else {
-        res.status(200).json({ todo: document, authenticated: true });
+      if (document) {
+        console.log(document);
+        res.status(200).json({ todo: document, authenticated: false });
       }
     }
   );

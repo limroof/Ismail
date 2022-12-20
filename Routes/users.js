@@ -43,7 +43,11 @@ userRouter.patch(
   passport.authenticate("jwt", { session: false }),
   userCtrl.updateTodo
 );
-
+userRouter.delete(
+  "/todo",
+  passport.authenticate("jwt", { session: false }),
+  userCtrl.deleteTodo
+);
 userRouter.get(
   "/admin",
   passport.authenticate("jwt", { session: false }),
