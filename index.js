@@ -23,7 +23,7 @@ const db = mongoose.connection;
  */
 app.use(
   cors({
-    origin: "https://ismail-two.vercel.app",
+    origin: "https://limroof.github.io/",
     credentials: true,
   })
 );
