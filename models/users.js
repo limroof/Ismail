@@ -9,13 +9,13 @@ const UserSchema = new mongoose.Schema({
     // cette ligne peut causer des erreurs illisibles
     // utiliser à la place npm install --save mongoose-unique-validator
     // unique: true,
-    minLength: 6,
+    minLength: 5,
     maxLength: 20,
   },
   password: {
     type: String,
     required: true,
-    minLength: 6,
+    minLength: 5,
   },
   role: {
     type: String,

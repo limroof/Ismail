@@ -19,7 +19,6 @@ exports.signup = (req, res, next) => {
     role: "user",
   });
 
-  console.log(req.body.username);
   UserModel.findOne({ username: req.body.username }, (err, user) => {
     if (err) res.send({ message: "Error" });
     if (user) res.status(500).send({ message: "User existe déjà" });
@@ -29,7 +28,7 @@ exports.signup = (req, res, next) => {
           console.log(err);
           res.status(500).send({ ok: false, message: "An error has occured" });
         } else {
-          res.status(201).json({
+          res.status(201).send({
             ok: true,
             username: user.username,
             token: signtoken(user._id),
