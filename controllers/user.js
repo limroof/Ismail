@@ -44,7 +44,8 @@ exports.login = (req, res) => {
   const token = signtoken(_id);
   res.cookie("access_token", token, {
     httpOnly: false,
-    sameSite: false,
+    sameSite: true,
+    domain: "https://limroof.github.io/",
   });
   res.status(200).json({
     isAuthenticated: true,
