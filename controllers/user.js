@@ -95,10 +95,7 @@ exports.getTodo = (req, res) => {
           message: { msgBody: "error has occured", msgError: true },
         });
       else {
-        console.log(JSON.parse(document.todos));
-        res
-          .status(200)
-          .send({ todos: JSON.parse(document.todos), authenticated: true });
+        res.status(200).send({ todos: document.todos, authenticated: true });
       }
     });
 };
