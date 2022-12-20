@@ -85,6 +85,8 @@ exports.addTodo = (req, res) => {
 };
 
 exports.getTodo = (req, res) => {
+  console.log(" tiiii");
+
   UserModel.findById({ _id: req.user._id })
     .populate("todos")
     .exec((err, document) => {
