@@ -10,7 +10,6 @@ var cookieParser = require("cookie-parser");
 
 userRouter.use(bodyParser.json());
 userRouter.use(cookieParser());
-
 // ******************** USER ROUTE ******************************
 userRouter.post("/register", userCtrl.signup);
 userRouter.post(
