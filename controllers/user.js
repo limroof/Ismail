@@ -95,7 +95,9 @@ exports.getTodo = (req, res) => {
           message: { msgBody: "error has occured", msgError: true },
         });
       else {
-        res.status(200).json({ todos: document.todos, authenticated: true });
+        res
+          .status(200)
+          .json({ todos: JSON.parse(document.todos), authenticated: true });
       }
     });
 };
