@@ -98,7 +98,7 @@ exports.getTodo = (req, res) => {
         });
       else {
         console.log("SUCCESS GET_TODO");
-        res.status(200).json({ todos: document.todos, authenticated: true });
+        res.status(200).send({ todos: document.todos, authenticated: true });
       }
     });
 };
