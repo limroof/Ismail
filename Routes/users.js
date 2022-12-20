@@ -10,10 +10,6 @@ var cookieParser = require("cookie-parser");
 
 userRouter.use(bodyParser.json());
 userRouter.use(cookieParser());
-userRouter.setHeader(
-  "Access-Control-Allow-Origin",
-  "https://limroof.github.io/"
-);
 
 // ******************** USER ROUTE ******************************
 userRouter.post("/register", userCtrl.signup);
