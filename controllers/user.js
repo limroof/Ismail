@@ -61,7 +61,7 @@ exports.logout = (req, res) => {
 };
 
 exports.addTodo = (req, res) => {
-  const todo = new Todo(req.body);
+  const todo = new TodoModel(req.body);
   console.log(req.body);
   todo.save((err) => {
     if (err)
