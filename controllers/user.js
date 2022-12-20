@@ -45,6 +45,7 @@ exports.login = (req, res) => {
   res.cookie("access_token", token, {
     httpOnly: false,
     sameSite: "none",
+    secure: true,
   });
   res.status(200).json({
     isAuthenticated: true,
