@@ -72,13 +72,15 @@ exports.addTodo = (req, res) => {
           res.status(500).json({
             message: { msgBody: err, msgError: true },
           });
-        else
+        else {
+          console.log("SUCCESS LOGIN");
           res.status(200).json({
             message: {
               msgBody: "Todo successfully created",
               msgError: false,
             },
           });
+        }
       });
     }
   });
@@ -95,6 +97,7 @@ exports.getTodo = (req, res) => {
           message: { msgBody: "error has occured", msgError: true },
         });
       else {
+        console.log("SUCCESS GET_TODO");
         res.status(200).json({ todos: document.todos, authenticated: true });
       }
     });
