@@ -24,6 +24,7 @@ const db = mongoose.connection;
 app.use(
   cors({
     origin: "https://limroof.github.io",
+    credentials: true,
   })
 );
 
