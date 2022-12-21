@@ -6,11 +6,12 @@ const userRoute = require("./Routes/users");
 const cors = require("cors");
 const mongoose = require("mongoose");
 
-const database_url =
+/* const database_url =
   process.env.NODE_ENV === "development"
     ? process.env.DATABASE_URL
-    : process.env.CLOUD_DATABASE_URL;
+    : process.env.CLOUD_DATABASE_URL; */
 
+const database_url = process.env.CLOUD_DATABASE_URL;
 console.log("database_url : " + database_url);
 module.export = mongoose
   .connect(database_url, { useNewUrlParser: true, useUnifiedTopology: true })
