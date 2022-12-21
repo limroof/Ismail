@@ -126,7 +126,8 @@ exports.getTodo = (req, res) => {
 
 exports.updateTodo = (req, res) => {
   console.log(req.body);
-  const { _id, name, newName } = req.body;
+  const { _id, name, newName } = req.body.current;
+  console.log(name + ` aaaa`);
   TodoModel.findByIdAndUpdate(
     { _id },
     { name: newName },
@@ -137,7 +138,6 @@ exports.updateTodo = (req, res) => {
           message: { msgBody: "error has occured", msgError: true },
         });
       if (document) {
-        console.log("");
         console.log(document);
         res.status(200).json({ todo: document, authenticated: false });
       }

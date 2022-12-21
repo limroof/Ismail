@@ -29,7 +29,7 @@ const db = mongoose.connection;
 app.use(
   cors({
     origin: "https://limroof.github.io",
-    /*  origin: "http://localhost:3000", */
+    /* origin: "http://localhost:3000", */
     credentials: true,
   })
 );
