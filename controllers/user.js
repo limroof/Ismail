@@ -87,19 +87,18 @@ exports.addTodo = (req, res) => {
   });
 };
 exports.deleteTodo = (req, res) => {
-  const _id = req.body._id;
+  const _id = req.body.current._id;
   TodoModel.findByIdAndDelete(_id, (err) => {
     if (err)
       res.status(500).json({ message: { msgBody: err, msgError: true } });
     else {
-      req.user.todos.splice(req.user.todos.indexOf(_id), 1);
       req.user.save((err) => {
         if (err)
           res.status(500).json({
             message: { msgBody: err, msgError: true },
           });
         else {
-          console.log("SUCCESS LOGIN");
+          console.log("SUCCESS DELETE");
           res.status(200).json({
             message: {
               msgBody: "Todo successfully created",
@@ -120,7 +119,6 @@ exports.getTodo = (req, res) => {
           message: { msgBody: "error has occured", msgError: true },
         });
       else {
-        console.log("SUCCESS: GET_TODO");
         res.status(200).send({ todos: document.todos, authenticated: true });
       }
     });
