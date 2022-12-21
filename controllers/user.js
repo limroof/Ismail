@@ -43,7 +43,7 @@ exports.login = (req, res) => {
   const { _id, username, role } = req.user;
   const token = signtoken(_id);
   res.cookie("access_token", token, {
-    httpOnly: false,
+    httpOnly: true,
     sameSite: "none",
     secure: true,
   });
