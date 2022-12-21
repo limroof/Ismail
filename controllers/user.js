@@ -92,7 +92,7 @@ exports.deleteTodo = (req, res) => {
     if (err)
       res.status(500).json({ message: { msgBody: err, msgError: true } });
     else {
-      req.user.todos.splice(req.user.todos.indexOf(), 1);
+      req.user.todos.splice(req.user.todos.indexOf(_id), 1);
       req.user.save((err) => {
         if (err)
           res.status(500).json({
