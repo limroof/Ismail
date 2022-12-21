@@ -128,7 +128,7 @@ exports.getTodo = (req, res) => {
 
 exports.updateTodo = (req, res) => {
   console.log(req.body);
-  const { _id, name, newName } = req.body.current;
+  const { _id, name, newName } = req.body;
   TodoModel.findByIdAndUpdate(
     { _id },
     { name: newName },
