@@ -8,14 +8,19 @@ const mongoose = require("mongoose");
 
 const USER = process.env.USERNAME_MONGODB;
 const PSW = process.env.PASSWORD_MONGODB;
-console.log(PSW);
+const database_url =
+  process.env.NODE_ENV === "development"
+    ? process.env.DATABASE_URL
+    : process.env.CLOUD_DATABASE_URL;
+
 module.export = mongoose
-  .connect(
-    `mongodb+srv://${USER}:${PSW}@cluster0.zx9nhb9.mongodb.net/?retryWrites=true&w=majority`,
-    { useNewUrlParser: true, useUnifiedTopology: true }
+  .connect(database_url, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() =>
+    console.log("Connexion à MongoDB réussie ! | " + process.env.NODE_ENV)
   )
-  .then(() => console.log("Connexion à MongoDB réussie !"))
-  .catch((e) => console.log("Connexion à MongoDB échouée !"));
+  .catch((e) =>
+    console.log("Connexion à MongoDB échouée ! | " + process.env.NODE_ENV)
+  );
 
 /* const mongoDB = "mongodb://127.0.0.1:27017/UsersTodos";
 mongoose.connect(mongoDB, { useNewUrlParser: true });
