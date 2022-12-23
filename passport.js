@@ -31,7 +31,7 @@ passport.use(
 
 // done(err) return error
 // done(null, false)   unauthorized
-// done(null, user)    add user to payload and isautenticated true
+// done(password, user)    add user to payload and isautenticated true
 passport.use(
   new LocalStrategy((username, password, done) => {
     User.findOne({ username }, (err, user) => {

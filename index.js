@@ -26,10 +26,14 @@ module.export = mongoose
 mongoose.connect(mongoDB, { useNewUrlParser: true });
 const db = mongoose.connection;
  */
+
+const origin =
+  process.env.NODE_ENV === "development"
+    ? "https://limroof.github.io"
+    : "https://limroof.github.io";
 app.use(
   cors({
-    origin: "https://limroof.github.io",
-    /* origin: "http://localhost:3000", */
+    origin: origin,
     credentials: true,
   })
 );
