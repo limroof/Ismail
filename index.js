@@ -30,10 +30,11 @@ const db = mongoose.connection;
 const origin =
   process.env.NODE_ENV === "development"
     ? "https://limroof.github.io"
-    : "https://limroof.github.io";
+    : "http://localhost:3000";
 app.use(
   cors({
     origin: origin,
+    /* origin: "http://localhost:3000", */
     credentials: true,
   })
 );

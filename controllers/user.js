@@ -41,8 +41,7 @@ exports.signup = (req, res, next) => {
 
 exports.login = (req, res) => {
   const { _id, username, role } = req.user;
-  /* const token = signtoken(_id); */
-  UserModel.findOne();
+  const token = signtoken(_id);
   res.cookie("access_token", token, {
     httpOnly: true,
     sameSite: "none",
