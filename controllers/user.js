@@ -33,6 +33,7 @@ exports.signup = (req, res, next) => {
             httpOnly: true,
             sameSite: "none",
             secure: true,
+            expiresIn: 60 * 60 * 24 * 30,
           });
           res.status(201).send({
             ok: true,
@@ -52,6 +53,7 @@ exports.login = (req, res) => {
     httpOnly: true,
     sameSite: "none",
     secure: true,
+    expiresIn: 60 * 60 * 24 * 30,
   });
   res.status(200).json({
     isAuthenticated: true,
