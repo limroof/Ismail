@@ -14,13 +14,13 @@ const signtoken = (userId) => {
 };
 
 exports.signup = (req, res, next) => {
+  const { username, password } = req.body;
   var newUser = new UserModel({
-    username: req.body.username,
-    password: req.body.password,
+    username: username,
+    password: password,
     role: "user",
   });
-
-  UserModel.findOne({ username: req.body.username }, (err, user) => {
+  UserModel.findOne({ username: username }, (err, user) => {
     if (err) res.send({ message: "Error" });
     if (user) res.status(500).send({ message: "User existe déjà" });
     if (!user) {
@@ -29,9 +29,11 @@ exports.signup = (req, res, next) => {
           console.log(err);
           res.status(500).send({ ok: false, message: "An error has occured" });
         } else {
+          console.log(user);
           res.status(201).send({
             ok: true,
-            username: user.username,
+            isAuthenticated: true,
+            user: { username, role: "user" },
             token: signtoken(user._id),
           });
         }
@@ -58,8 +60,8 @@ exports.login = (req, res) => {
               });
             } else {
               res.status(200).json({
-                isAuthenticated: true,
                 ok: true,
+                isAuthenticated: true,
                 user: { username, role: "user" },
                 token: signtoken(user._id),
               });
