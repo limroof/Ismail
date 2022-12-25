@@ -29,13 +29,6 @@ exports.signup = (req, res, next) => {
           console.log(err);
           res.status(500).send({ ok: false, message: "An error has occured" });
         } else {
-          const token = signtoken(user._id);
-          res.cookie("access_token", token, {
-            httpOnly: true,
-            sameSite: "none",
-            secure: true,
-            expiresIn: 60 * 60 * 24 * 30,
-          });
           res.status(201).send({
             ok: true,
             username: user.username,
