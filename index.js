@@ -2,16 +2,19 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 const port = process.env.PORT;
+const bodyParser = require("body-parser");
 const userRoute = require("./Routes/users");
+const todoRoute = require("./Routes/todo");
+
 const cors = require("cors");
 const mongoose = require("mongoose");
 
-/* const database_url =
+const database_url =
   process.env.NODE_ENV === "development"
     ? process.env.DATABASE_URL
-    : process.env.CLOUD_DATABASE_URL; */
+    : process.env.CLOUD_DATABASE_URL;
 
-const database_url = process.env.CLOUD_DATABASE_URL;
+/* const database_url = process.env.CLOUD_DATABASE_URL; */
 console.log("database_url : " + database_url);
 module.export = mongoose
   .connect(database_url, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -39,7 +42,8 @@ app.use(
   })
 );
 
-app.use("/users/", userRoute);
+app.use(bodyParser.json());
+app.use("/users/", userRoute, todoRoute);
 
 app.listen(port, () => {
   console.log("Example app listening on port ", port);
