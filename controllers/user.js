@@ -143,7 +143,6 @@ exports.updateTodo = (req, res) => {
           message: { msgBody: "error has occured", msgError: true },
         });
       if (document) {
-        console.log(document);
         res.status(200).json({ todo: document, authenticated: false });
       }
     }

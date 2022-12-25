@@ -20,7 +20,7 @@ userRouter.post(
 // ******************** GET ROUTE ********************************
 userRouter.get(
   "/logout",
-  passport.authenticate("jwt", { session: false }),
+  /*  passport.authenticate("jwt", { session: false }), */
   userCtrl.logout
 );
 // ******************** END: USER ROUTE ******************************
