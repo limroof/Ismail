@@ -49,14 +49,14 @@ exports.login = (req, res) => {
       if (!user) {
         res
           .status(401)
-          .json({ messsage: "Paire identifiants/mot de passe incorrecte" });
+          .json({ message: "Paire identifiants/mot de passe incorrecte" });
       } else {
         bcrypt
           .compare(password, user.password)
           .then((valid) => {
             if (!valid) {
               res.status(401).json({
-                messsage: "Paire identifiants/mot de passe incorrecte",
+                message: "Paire identifiants/mot de passe incorrecte",
               });
             } else {
               res.status(200).json({
