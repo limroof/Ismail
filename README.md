@@ -6,8 +6,8 @@ Set Environnement variables
 nodemon index.js
 
 ### Front-end: Branch gh-pages <br/>
-yarn install
-yarn start
+npm install<br>
+npm run start
 
 https://limroof.github.io/Ismail/
 
