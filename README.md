@@ -1,7 +1,7 @@
 # REACT + EXPRESS + MONGODB
 
-## Branche gh-pages : front-end<br/>
-## Branche Vercel : express App + express
+### Front-end: Branch gh-pages <br/>
+### Back-end: express App + express + (Branch Vercel)
 
 https://limroof.github.io/Ismail/
 
